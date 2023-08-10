@@ -5,6 +5,7 @@ import sys
 import config
 import login
 import process
+from notification_pusher import notification_pusher
 
 DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
 logging.basicConfig(level=logging.INFO,
@@ -53,6 +54,8 @@ for section in configs.sections():
             reservation_params = process.act_params(max_shop_id, item)
             process.reservation(reservation_params, mobile)
             process.getUserEnergyAward(mobile)
+            notification_pusher(summary=f'{title} 申购成功', message=f'商品：{title}, 门店：{shop_info["name"]}')
     except BaseException as e:
         print(e)
         logging.error(e)
+        notification_pusher(summary=f'申购失败：程序错误', message=f'具体原因: {str(e)}')

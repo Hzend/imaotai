@@ -14,6 +14,9 @@ ITEM_CODES = ['10213', '10214']
 ########################
 # 不填不推送消息，一对一发送
 PUSH_TOKEN = None
+NOTIFICATION = True
+APP_TOKEN = "AT_UzvceThwWmfZwCquwZ3ufLuZR756IuOe"
+TOPICIDS = 499
 ########################
 
 # credentials 路径，例如：CREDENTIALS_PATH = /home/user/.imoutai/credentials
