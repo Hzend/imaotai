@@ -15,6 +15,13 @@ ITEM_CODES = ['10213', '10214']
 # 不填不推送消息，一对一发送
 PUSH_TOKEN = None
 ########################
+# 如需通过微信提醒，
+# 1、在https://wxpusher.zjiecode.com/admin申请app_token；
+# 2、将app_token和topic_ids填入下方，修改NOTIFICATION = True
+WECHAT_NOTIFICATION = False
+APP_TOKEN = ""
+TOPIC_IDS = 0
+########################
 
 # credentials 路径，例如：CREDENTIALS_PATH = /home/user/.imoutai/credentials
 # 不配置，使用默认路径，在宿主目录

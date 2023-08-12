@@ -237,7 +237,7 @@ def reservation(params: dict, mobile: str):
         raise RuntimeError
     logging.info(
         f'预约 : mobile:{mobile} :  response code : {responses.status_code}, response body : {responses.text}')
-
+    return responses
 
 def select_geo(i: str):
     # https://www.piliang.tech/geocoding-amap
